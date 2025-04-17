@@ -4,6 +4,9 @@ class Cell:
         self.i = i
         self.j = j
 
+        # variable so the algorithms know if a cell has been visited
+        self.isVisited = False
+
         # currently sets walls on all sides but this will be dealt with through maze generation algos in the main file
         self.walls = {
             "top": True,
@@ -24,3 +27,6 @@ class Cell:
 
     def hasLeftWall(self):
         return self.walls["left"]
+
+    def changeWall(self, wall):
+        self.walls[wall] = False
