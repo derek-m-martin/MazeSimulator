@@ -8,8 +8,6 @@ class Cell:
     def changeWall(self, side, state):
         if side in self.walls:
             self.walls[side] = state
-        else:
-            print(f"Error: Invalid wall side '{side}' for cell ({self.i}, {self.j})")
 
     def hasTopWall(self):
         return self.walls['top']
